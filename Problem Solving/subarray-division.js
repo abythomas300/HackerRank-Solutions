@@ -12,27 +12,27 @@
 // 8. Return 'counter'
 
 // Solution:
-function birthday(s, d, m) {
+function subarrayDivision(s, d, m) {
     
     let counter = 0
     let rounds = s.length-(m-1)
     let sum = 0
-
+    let upperBound = m
     if(s.length == 1) {   // if there is only one square of chocolate left
       return 1
     } else {
-      for(let i = 1; i <= rounds; i++) {
+      for(let i = 0; i <= rounds; i++) {
       sum = 0  // reset 'sum'
-        for(let j = i-1; j < m; j++) {
+        for(let j = i; j < i+m; j++) {
          sum += s[j]
         }
-      m += 1 // incrementing 'm' to increase the upper bound
+        upperBound += 1 // incrementing upperBound to maintain the length of sliding window constant
       if(sum ==  d) {
         counter += 1
       }
     }
    }    
-
+    console.log(counter)
     return counter      
 }
 
