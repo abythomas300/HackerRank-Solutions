@@ -37,3 +37,7 @@ function birthday(s, d, m) {
 }
 
 subarrayDivision([2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1], 18, 7)
+
+// Algorithmic Complexity:
+// Time : O(n^2)
+// Space: O(1)
